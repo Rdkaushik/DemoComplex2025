@@ -1,0 +1,18 @@
+name: Complex
+
+on: push
+
+jobs:
+windows: 
+  runs-on: windows-latest
+  steps:
+  -run: date
+ubuntu: 
+  runs-on: ubuntu-latest
+  steps:
+  - run: date
+depends:
+needs: [windows,ubuntu]
+runs-on: ubuntu-latest
+ steps: 
+  - run: date
